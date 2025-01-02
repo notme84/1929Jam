@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://lrhjgkau63ah"]
+[gd_scene load_steps=3 format=3 uid="uid://lrhjgkau63ah"]
 
 [ext_resource type="Texture2D" uid="uid://cqtfcdwpghjb7" path="res://icon.svg" id="1_u1xpv"]
+[ext_resource type="Script" path="res://player.gd" id="2_acny2"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Game" type="Node2D"]
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(369, 214)
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(484, 264)
 texture = ExtResource("1_u1xpv")
+script = ExtResource("2_acny2")
+
+[node name="Background" type="Sprite2D" parent="."]
