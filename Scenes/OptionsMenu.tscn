@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtbrvvb1htyik"]
+
+[ext_resource type="LabelSettings" uid="uid://dwm0vvgrdghdp" path="res://Assets/Resources/TitleLabelSettings.tres" id="1_lexwg"]
+[ext_resource type="FontFile" uid="uid://bp646h2s0n7bl" path="res://Assets/Art/tintin.ttf" id="2_rlllu"]
+[ext_resource type="Script" path="res://Scenes/Back.gd" id="3_6awoy"]
+
+[sub_resource type="Theme" id="Theme_3n57t"]
+default_font = ExtResource("2_rlllu")
+
+[node name="Option Menu" type="Node2D"]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.358
+offset_bottom = -80.984
+grow_horizontal = 2
+
+[node name="Title" type="Label" parent="CanvasLayer2/VBoxContainer"]
+layout_mode = 2
+text = "
+Options"
+label_settings = ExtResource("1_lexwg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Main Menu" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = -46.0
+offset_right = 49.5
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_3n57t")
+
+[node name="Resolution" type="MenuButton" parent="CanvasLayer/Main Menu"]
+visible = false
+layout_mode = 2
+text = "Resolution"
+flat = false
+
+[node name="Label" type="Label" parent="CanvasLayer/Main Menu"]
+layout_mode = 2
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="Music Volume" type="HSlider" parent="CanvasLayer/Main Menu"]
+layout_mode = 2
+value = 100.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/Main Menu"]
+layout_mode = 2
+text = "SFX Volume"
+horizontal_alignment = 1
+
+[node name="SFX Volume" type="HSlider" parent="CanvasLayer/Main Menu"]
+layout_mode = 2
+value = 100.0
+
+[node name="MainMenu" type="MenuButton" parent="CanvasLayer/Main Menu"]
+layout_mode = 2
+text = "Back to Main Menu"
+flat = false
+script = ExtResource("3_6awoy")
+
+[connection signal="pressed" from="CanvasLayer/Main Menu/MainMenu" to="CanvasLayer/Main Menu/MainMenu" method="_on_pressed"]

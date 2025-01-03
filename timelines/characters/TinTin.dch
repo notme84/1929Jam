@@ -17,12 +17,12 @@
 "portraits": {
 "Default": {
 "export_overrides": {
-"image": "\"res://Assets/Art/Profile/tintin profile.png\""
+"image": "\"res://Assets/Art/tintin.png\""
 },
 "ignore_char_scale": false,
 "mirror": false,
 "offset": Vector2(-150, 0),
-"scale": 0.3,
+"scale": 1.0,
 "scene": ""
 }
 },

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bs8ua78ptijf" path="res://Scenes/TimelineButton.tscn" id="4_nmpcb"]
 [ext_resource type="FontFile" uid="uid://bp646h2s0n7bl" path="res://Assets/Art/tintin.ttf" id="4_ow6d8"]
 [ext_resource type="Resource" path="res://timelines/GameIntro.dtl" id="5_yp6ja"]
-[ext_resource type="Script" path="res://Scenes/quit.gd" id="6_wejjw"]
+[ext_resource type="Script" path="res://Scenes/options.gd" id="8_pjjqe"]
 
 [sub_resource type="Theme" id="Theme_ra84s"]
 default_font = ExtResource("4_ow6d8")
@@ -25,14 +25,12 @@ script = ExtResource("2_t5ovt")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2"]
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.358
-offset_bottom = -80.984
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 1154.0
+offset_bottom = 252.0
 grow_horizontal = 2
 
-[node name="Title" type="Label" parent="CanvasLayer2/VBoxContainer"]
+[node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "
 Adventures of TinTin: 
@@ -41,36 +39,35 @@ label_settings = ExtResource("4_e5a3k")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Main Menu" type="VBoxContainer" parent="CanvasLayer"]
+[node name="Main Menu" type="VBoxContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -49.5
-offset_top = -46.0
-offset_right = 49.5
-offset_bottom = 46.0
+offset_left = 526.5
+offset_top = 278.0
+offset_right = 625.5
+offset_bottom = 370.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_ra84s")
 
-[node name="Button" parent="CanvasLayer/Main Menu" instance=ExtResource("4_nmpcb")]
+[node name="Button" parent="Main Menu" instance=ExtResource("4_nmpcb")]
 layout_mode = 2
 Timeline = ExtResource("5_yp6ja")
 
-[node name="Options" type="MenuButton" parent="CanvasLayer/Main Menu"]
+[node name="Options" type="Button" parent="Main Menu"]
 layout_mode = 2
 text = "Options"
-flat = false
+script = ExtResource("8_pjjqe")
 
-[node name="Quit" type="MenuButton" parent="CanvasLayer/Main Menu"]
+[node name="Credits" type="MenuButton" parent="Main Menu"]
 visible = false
 layout_mode = 2
-text = "Quit"
+text = "Credits"
 flat = false
-script = ExtResource("6_wejjw")
 
-[connection signal="pressed" from="CanvasLayer/Main Menu/Quit" to="CanvasLayer/Main Menu/Quit" method="_on_pressed"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[connection signal="pressed" from="Main Menu/Options" to="Main Menu/Options" method="_on_pressed"]

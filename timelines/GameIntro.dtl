@@ -1,12 +1,10 @@
 [background arg="res://Assets/Art/european background.png" fade="0.0"]
 join TinTin left
-TinTin: 1929 Belgium\
-Hello World!
+TinTin: Hello World!
 - Test Choice
 	TinTin: Trouble's afoot!
 - Other Choice
 	leave TinTin
 	join Snowy left
 	Snowy: This is text! Woof!
-[clear time="1.0"]
 To be continued!
