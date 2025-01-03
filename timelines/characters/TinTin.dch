@@ -8,14 +8,14 @@
 "sound_moods": {},
 "style": "VisualNovelStyle"
 },
-"default_portrait": "TinTin",
+"default_portrait": "Default",
 "description": "Boy Adventurer",
 "display_name": "TinTin",
 "mirror": false,
 "nicknames": ["boy"],
 "offset": Vector2(0, 0),
 "portraits": {
-"TinTin": {
+"Default": {
 "export_overrides": {
 "image": "\"res://Assets/Art/Profile/tintin profile.png\""
 },

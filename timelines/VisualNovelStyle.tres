@@ -23,7 +23,9 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_odp4n"]
 script = ExtResource("1_bjpqs")
 scene = ExtResource("3_7ktd1")
-overrides = {}
+overrides = {
+"portrait_size_mode": "0"
+}
 
 [sub_resource type="Resource" id="Resource_y3alh"]
 script = ExtResource("1_bjpqs")
@@ -33,7 +35,10 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_63f4p"]
 script = ExtResource("1_bjpqs")
 scene = ExtResource("5_puddw")
-overrides = {}
+overrides = {
+"name_label_font": "\"res://Assets/Art/tintin.ttf\"",
+"normal_font": "\"res://Assets/Art/tintin.ttf\""
+}
 
 [sub_resource type="Resource" id="Resource_tsjys"]
 script = ExtResource("1_bjpqs")
@@ -43,7 +48,9 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_3up60"]
 script = ExtResource("1_bjpqs")
 scene = ExtResource("7_4w41e")
-overrides = {}
+overrides = {
+"font_custom": "\"res://Assets/Art/tintin.ttf\""
+}
 
 [sub_resource type="Resource" id="Resource_6kkqc"]
 script = ExtResource("1_bjpqs")

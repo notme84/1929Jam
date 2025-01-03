@@ -1,19 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://lrhjgkau63ah"]
 
-[ext_resource type="Texture2D" uid="uid://bhka54yy6k05v" path="res://Assets/Art/othercity.jpeg" id="1_8nqsn"]
 [ext_resource type="Texture2D" uid="uid://c2jecubapn38p" path="res://Assets/Art/icon.svg" id="1_qkfct"]
+[ext_resource type="Texture2D" uid="uid://dau3ld8olqbbs" path="res://Assets/Art/othercity.png" id="1_x5w1k"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="2_t5ovt"]
+[ext_resource type="LabelSettings" uid="uid://dwm0vvgrdghdp" path="res://Assets/Resources/TitleLabelSettings.tres" id="4_e5a3k"]
 [ext_resource type="PackedScene" uid="uid://bs8ua78ptijf" path="res://Scenes/TimelineButton.tscn" id="4_nmpcb"]
 [ext_resource type="FontFile" uid="uid://bp646h2s0n7bl" path="res://Assets/Art/tintin.ttf" id="4_ow6d8"]
 [ext_resource type="Resource" path="res://timelines/GameIntro.dtl" id="5_yp6ja"]
 [ext_resource type="Script" path="res://Scenes/quit.gd" id="6_wejjw"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_vombf"]
-line_spacing = 5.0
-font = ExtResource("4_ow6d8")
-font_size = 100
-outline_size = 10
-outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_ra84s"]
 default_font = ExtResource("4_ow6d8")
@@ -21,47 +15,56 @@ default_font = ExtResource("4_ow6d8")
 [node name="MainMenu" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(555, 29)
-scale = Vector2(1.24603, 1.24603)
-texture = ExtResource("1_8nqsn")
+texture = ExtResource("1_x5w1k")
+centered = false
 
 [node name="Player" type="Sprite2D" parent="."]
-position = Vector2(190, 432)
+position = Vector2(280, 506)
 texture = ExtResource("1_qkfct")
 script = ExtResource("2_t5ovt")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 286.0
-offset_top = 116.0
-offset_right = 883.0
-offset_bottom = 237.0
-text = "TinTin Game!"
-label_settings = SubResource("LabelSettings_vombf")
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 1153.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "                            "
+label_settings = ExtResource("4_e5a3k")
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "                            "
+label_settings = ExtResource("4_e5a3k")
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Adventures of TinTin: 
+The Game"
+label_settings = ExtResource("4_e5a3k")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Title Menu" type="VBoxContainer" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 488.0
-offset_top = 296.0
-offset_right = 584.0
-offset_bottom = 362.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Main Menu" type="VBoxContainer" parent="."]
+offset_left = 530.0
+offset_top = 322.0
+offset_right = 629.0
+offset_bottom = 464.0
 theme = SubResource("Theme_ra84s")
 
-[node name="Button" parent="Title Menu" instance=ExtResource("4_nmpcb")]
+[node name="Button" parent="Main Menu" instance=ExtResource("4_nmpcb")]
 layout_mode = 2
 Timeline = ExtResource("5_yp6ja")
 
-[node name="Quit" type="Button" parent="Title Menu"]
+[node name="Options" type="MenuButton" parent="Main Menu"]
+layout_mode = 2
+text = "Options"
+flat = false
+
+[node name="Quit" type="MenuButton" parent="Main Menu"]
 layout_mode = 2
 text = "Quit"
+flat = false
 script = ExtResource("6_wejjw")
 
-[connection signal="pressed" from="Title Menu/Quit" to="Title Menu/Quit" method="_on_pressed"]
+[connection signal="pressed" from="Main Menu/Quit" to="Main Menu/Quit" method="_on_pressed"]

@@ -8,14 +8,14 @@
 "sound_moods": {},
 "style": "VisualNovelStyle"
 },
-"default_portrait": "Snowy",
+"default_portrait": "Default",
 "description": "A white Wire Fox Terrier",
 "display_name": "Snowy",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"Snowy": {
+"Default": {
 "export_overrides": {
 "image": "\"res://Assets/Art/Profile/snowy profile.png\""
 },
