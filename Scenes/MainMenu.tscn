@@ -23,48 +23,54 @@ position = Vector2(280, 506)
 texture = ExtResource("1_qkfct")
 script = ExtResource("2_t5ovt")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_right = 1153.0
-offset_bottom = 648.0
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "                            "
-label_settings = ExtResource("4_e5a3k")
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.358
+offset_bottom = -80.984
+grow_horizontal = 2
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="CanvasLayer2/VBoxContainer"]
 layout_mode = 2
-text = "                            "
-label_settings = ExtResource("4_e5a3k")
-
-[node name="Title" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Adventures of TinTin: 
+text = "
+Adventures of TinTin: 
 The Game"
 label_settings = ExtResource("4_e5a3k")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Main Menu" type="VBoxContainer" parent="."]
-offset_left = 530.0
-offset_top = 322.0
-offset_right = 629.0
-offset_bottom = 464.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Main Menu" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = -46.0
+offset_right = 49.5
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = SubResource("Theme_ra84s")
 
-[node name="Button" parent="Main Menu" instance=ExtResource("4_nmpcb")]
+[node name="Button" parent="CanvasLayer/Main Menu" instance=ExtResource("4_nmpcb")]
 layout_mode = 2
 Timeline = ExtResource("5_yp6ja")
 
-[node name="Options" type="MenuButton" parent="Main Menu"]
+[node name="Options" type="MenuButton" parent="CanvasLayer/Main Menu"]
 layout_mode = 2
 text = "Options"
 flat = false
 
-[node name="Quit" type="MenuButton" parent="Main Menu"]
+[node name="Quit" type="MenuButton" parent="CanvasLayer/Main Menu"]
+visible = false
 layout_mode = 2
 text = "Quit"
 flat = false
 script = ExtResource("6_wejjw")
 
-[connection signal="pressed" from="Main Menu/Quit" to="Main Menu/Quit" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main Menu/Quit" to="CanvasLayer/Main Menu/Quit" method="_on_pressed"]
