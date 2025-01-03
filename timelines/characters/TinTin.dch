@@ -1,0 +1,26 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.235731, 0.199453, 0.925, 1),
+"custom_info": {},
+"default_portrait": "TinTin",
+"description": "Boy Adventurer",
+"display_name": "TinTin",
+"mirror": false,
+"nicknames": ["boy"],
+"offset": Vector2(0, 0),
+"portraits": {
+"TinTin": {
+"export_overrides": {
+"image": "\"res://Assets/Art/Profile/tintin profile.png\""
+},
+"ignore_char_scale": true,
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}
