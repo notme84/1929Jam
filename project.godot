@@ -30,8 +30,8 @@ directories/dtl_directory={
 }
 extensions_folder="res://addons/dialogic_additions"
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://timelines/VisualNovelStyle.tres"]
+layout/default_style="res://timelines/VisualNovelStyle.tres"
 variables={}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
