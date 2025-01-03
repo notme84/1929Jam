@@ -1,6 +1,6 @@
 extends Button
 
-@onready var Timeline
+@export var Timeline : DialogicTimeline
 
 func _on_pressed():
-	Dialogic.start("res://timelines/GameIntro.dtl")
+	Dialogic.start(Timeline.resource_path)

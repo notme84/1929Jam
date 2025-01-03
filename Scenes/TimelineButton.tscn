@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs8ua78ptijf"]
+
+[ext_resource type="Script" path="res://Scenes/TriggerTimeline.gd" id="1_dj604"]
+
+[node name="Button" type="Button"]
+offset_left = 480.0
+offset_top = 326.0
+offset_right = 576.0
+offset_bottom = 357.0
+text = "Start Game"
+script = ExtResource("1_dj604")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
