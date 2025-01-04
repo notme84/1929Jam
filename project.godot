@@ -54,6 +54,11 @@ save/encryption_on_exports_only=true
 text/autopauses={}
 text/split_at_new_lines_as=0
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/dialogic/plugin.cfg")
