@@ -32,7 +32,10 @@ extensions_folder="res://addons/dialogic_additions"
 glossary/default_case_sensitive=true
 layout/style_list=["res://timelines/VisualNovelStyle.tres"]
 layout/default_style="res://timelines/VisualNovelStyle.tres"
-variables={}
+variables={
+"Count": 0,
+"Toggle": true
+}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
