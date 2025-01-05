@@ -3,10 +3,16 @@ join TinTin leftmost
 TinTin: Hello World!
 - Test Choice
 	TinTin: Trouble's afoot!
-	[signal arg="introEnded"]
 	leave TinTin
 	join Snowy leftmost
 	Snowy: Woof!
+	Count is {Count}
+	To be continued!
+	[signal arg="introEnded"]
+	Count is {Count}
+	set {Count} += 3
+	[signal arg="choiceCount"]
+	Count is {Count}
 - Other Choice
 	leave TinTin
 	join Snowy leftmost
@@ -14,3 +20,4 @@ TinTin: Hello World!
 	[signal arg="mainMenu"]
 	join TinTin center
 	TinTin: The End!
+[signal arg="timelineEnds"]
