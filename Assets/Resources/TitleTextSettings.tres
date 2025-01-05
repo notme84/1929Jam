@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bw3fr2uxv4tk"]
+
+[ext_resource type="FontFile" uid="uid://bp646h2s0n7bl" path="res://Assets/Art/tintin.ttf" id="1_cjaeu"]
+
+[resource]
+line_spacing = 5.0
+font = ExtResource("1_cjaeu")
+font_size = 60
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)

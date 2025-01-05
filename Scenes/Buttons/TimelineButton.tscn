@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bs8ua78ptijf"]
 
-[ext_resource type="Script" path="res://Scenes/TriggerTimeline.gd" id="1_dj604"]
+[ext_resource type="Script" path="res://Scripts/TriggerTimeline.gd" id="1_dj604"]
 
 [node name="Button" type="Button"]
 offset_left = 480.0

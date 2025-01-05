@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj3askmegv5oe"]
+
+[ext_resource type="PackedScene" uid="uid://c6jv6mbacu8tn" path="res://Scenes/Background/hill_city_background.tscn" id="1_coax6"]
+[ext_resource type="Script" path="res://Scenes/game.gd" id="1_xfjtn"]
+[ext_resource type="Resource" path="res://timelines/Intro.dtl" id="2_vg1fc"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_xfjtn")
+Timeline = ExtResource("2_vg1fc")
+
+[node name="HillCityBackground" parent="." instance=ExtResource("1_coax6")]
+visible = false

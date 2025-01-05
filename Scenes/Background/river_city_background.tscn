@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://fkpbre8teyhy"]
+
+[ext_resource type="Texture2D" uid="uid://dau3ld8olqbbs" path="res://Assets/Art/othercity.png" id="1_jlaof"]
+
+[node name="RiverCityBackground" type="Sprite2D"]
+texture = ExtResource("1_jlaof")
+centered = false

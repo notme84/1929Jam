@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bai1a8a72m0gk"]
+
+[ext_resource type="Script" path="res://Scripts/BackToMainMenu.gd" id="1_8sle4"]
+
+[node name="MainMenuButton" type="Button"]
+script = ExtResource("1_8sle4")

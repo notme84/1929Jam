@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6jv6mbacu8tn"]
+
+[ext_resource type="Texture2D" uid="uid://dflro35qm8dbs" path="res://Assets/Art/european background.png" id="1_at5lw"]
+
+[node name="HillCityBackground" type="Sprite2D"]
+position = Vector2(578, 324)
+texture = ExtResource("1_at5lw")

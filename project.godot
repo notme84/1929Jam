@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="1929Jam"
-run/main_scene="res://Scenes/MainMenu.tscn"
+run/main_scene="res://Scenes/Menu/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Assets/Art/icon.svg"
 
@@ -26,7 +26,7 @@ directories/dch_directory={
 "TinTin": "res://timelines/characters/TinTin.dch"
 }
 directories/dtl_directory={
-"GameIntro": "res://timelines/GameIntro.dtl"
+"GameIntro": "res://timelines/Intro.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 glossary/default_case_sensitive=true
@@ -53,11 +53,6 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 text/split_at_new_lines_as=0
-
-[display]
-
-window/stretch/mode="viewport"
-window/stretch/scale_mode="integer"
 
 [editor_plugins]
 

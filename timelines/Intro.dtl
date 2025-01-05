@@ -1,10 +1,16 @@
 [background arg="res://Assets/Art/european background.png" fade="0.0"]
-join TinTin left
+join TinTin leftmost
 TinTin: Hello World!
 - Test Choice
 	TinTin: Trouble's afoot!
+	[signal arg="introEnded"]
+	leave TinTin
+	join Snowy leftmost
+	Snowy: Woof!
 - Other Choice
 	leave TinTin
-	join Snowy left
+	join Snowy leftmost
 	Snowy: This is text! Woof!
-To be continued!
+	[signal arg="mainMenu"]
+	join TinTin center
+	TinTin: The End!

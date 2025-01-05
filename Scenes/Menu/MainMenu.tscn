@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://vr7v38at6pf7"]
+
+[ext_resource type="PackedScene" uid="uid://fkpbre8teyhy" path="res://Scenes/Background/river_city_background.tscn" id="1_fhnmo"]
+[ext_resource type="Texture2D" uid="uid://c2jecubapn38p" path="res://Assets/Art/icon.svg" id="2_aivd7"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="3_qa766"]
+[ext_resource type="LabelSettings" uid="uid://bw3fr2uxv4tk" path="res://Assets/Resources/TitleTextSettings.tres" id="4_qnl2r"]
+[ext_resource type="FontFile" uid="uid://bp646h2s0n7bl" path="res://Assets/Art/tintin.ttf" id="5_upxox"]
+[ext_resource type="PackedScene" uid="uid://41eqjahm4oow" path="res://Scenes/Buttons/SceneButton.tscn" id="8_5vh2b"]
+[ext_resource type="PackedScene" uid="uid://dj3askmegv5oe" path="res://Scenes/Game.tscn" id="9_a1bs7"]
+[ext_resource type="Script" path="res://Scripts/NewSceneButton.gd" id="9_oa5w1"]
+[ext_resource type="PackedScene" uid="uid://dtbrvvb1htyik" path="res://Scenes/Menu/OptionsMenu.tscn" id="10_1f8k2"]
+
+[sub_resource type="Theme" id="Theme_ra84s"]
+default_font = ExtResource("5_upxox")
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="RiverCityBackground" parent="." instance=ExtResource("1_fhnmo")]
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(280, 506)
+texture = ExtResource("2_aivd7")
+script = ExtResource("3_qa766")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 1154.0
+offset_bottom = 252.0
+grow_horizontal = 2
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "
+Adventures of TinTin: 
+The Game"
+label_settings = ExtResource("4_qnl2r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main Menu" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 526.5
+offset_top = 278.0
+offset_right = 625.5
+offset_bottom = 370.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ra84s")
+
+[node name="StartGameButton" parent="Main Menu" instance=ExtResource("8_5vh2b")]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_upxox")
+theme_override_font_sizes/font_size = 30
+text = "Start Game"
+newScene = ExtResource("9_a1bs7")
+
+[node name="OptionsButton" type="Button" parent="Main Menu"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_upxox")
+theme_override_font_sizes/font_size = 30
+text = "Options"
+script = ExtResource("9_oa5w1")
+newScene = ExtResource("10_1f8k2")
+
+[node name="Credits" type="MenuButton" parent="Main Menu"]
+visible = false
+layout_mode = 2
+text = "Credits"
+flat = false
+
+[connection signal="pressed" from="Main Menu/OptionsButton" to="Main Menu/OptionsButton" method="_on_pressed"]

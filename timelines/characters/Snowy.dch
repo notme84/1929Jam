@@ -20,7 +20,7 @@
 "image": "\"res://Assets/Art/Snowy.png\""
 },
 "mirror": false,
-"offset": Vector2(-150, 0),
+"offset": Vector2(10, 5),
 "scale": 1.0,
 "scene": ""
 }
