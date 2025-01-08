@@ -13,6 +13,7 @@ TinTin: Hello World!
 	set {Count} += 3
 	[signal arg="choiceCount"]
 	Count is {Count}
+	jump 
 - Other Choice
 	leave TinTin
 	join Snowy leftmost
